@@ -1,4 +1,4 @@
-var startingMinutes = 0;
+var startingMinutes = 10;
 var time = startingMinutes * 60;
 
 var countDownEl = document.getElementById('timer');
@@ -13,13 +13,13 @@ function updateTimer(){
 
     seconds = seconds < 10 ? "0" + seconds : seconds;
 
-    if (minutes >= 60) {
-        hour += 1, minutes -= 60
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-    }
+    // if (minutes >= 60) {
+    //     hour += 1, minutes -= 60
+    //     // minutes = minutes < 10 ? "0" + minutes : minutes;
+    // }
 
 
     countDownEl.innerHTML = `${hour}: ${minutes}: ${seconds}`;
-    time ++
-    hour ++
+    time --
+    // hour ++
 }
