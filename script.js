@@ -1,7 +1,7 @@
-var startingMinutes = 59;
+var startingMinutes = 0;
 var time = startingMinutes * 60;
 
-var countDownEl = document.getElementById('countdown');
+var countDownEl = document.getElementById('timer');
 
 setInterval(updateTimer, 100);
 
@@ -9,6 +9,7 @@ function updateTimer(){
     var hour = 0;
     var minutes = Math.floor(time / 60);
     var seconds = time % 60;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
 
     seconds = seconds < 10 ? "0" + seconds : seconds;
 
