@@ -3,7 +3,7 @@ var time = startingMinutes * 60;
 
 var countDownEl = document.getElementById('timer');
 
-setInterval(updateTimer, 100);
+setInterval(updateTimer, 1000);
 
 function updateTimer(){
     var hour = 0;
